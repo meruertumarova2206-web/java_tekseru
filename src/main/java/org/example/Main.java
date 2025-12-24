@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Clothing Store Management System \n");
+        System.out.println("===Clothing Store Management System=== \n");
 
         ClothingItem item1 = new ClothingItem(1, "Jacket", "L", 12000, "Armani");
         ClothingItem item2 = new ClothingItem(2, "Jeans", "M", 8000, "Levis");
@@ -13,21 +13,21 @@ public class Main {
         Order order1 = new Order(201, "Alice", 12000, "Pending");
         Order order2 = new Order(); //d.c.
 
-        System.out.println("CLOTHING ITEMS");
+        System.out.println("---CLOTHING ITEMS---");
         System.out.println(item1);
         System.out.println(item2);
         System.out.println(item3);
 
-        System.out.println("\n CUSTOMERS");
+        System.out.println("\n ---CUSTOMERS---");
         System.out.println(customer1);
         System.out.println(customer2);
 
-        System.out.println("\n ORDERS");
+        System.out.println("\n--- ORDERS---");
         System.out.println(order1);
         System.out.println(order2);
 
 
-        System.out.println("\n TESTING SETTERS");
+        System.out.println("\n ---TESTING SETTERS---");
         item3.setName("T-Shirt");
         item3.setPrice(5000);
         item3.setSize("S");
@@ -44,11 +44,11 @@ public class Main {
         System.out.println(order2);
 
 
-        System.out.println("\n TESTING ITEM METHODS");
+        System.out.println("\n ---TESTING ITEM METHODS---");
         System.out.println(item1.getName() + " is premium? " + item1.isPremium());
         item2.applyDiscount(10);
         System.out.println(item2.getName() + " new price after 10% discount: " + item2.getPrice());
 
-        System.out.println("\n Program Complete");
+        System.out.println("\n ===Program Complete===");
     }
 }
