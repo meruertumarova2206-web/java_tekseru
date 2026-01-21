@@ -14,11 +14,11 @@ public abstract class ClothingItem {
         setPrice(price);
     }
 
-    // ABSTRACT METHODS (REQUIRED)
+
     public abstract void display();
     public abstract String getType();
 
-    // SETTERS WITH EXCEPTIONS
+
     public void setItemId(int itemId) {
         if (itemId <= 0) {
             throw new IllegalArgumentException("Item ID must be positive");
