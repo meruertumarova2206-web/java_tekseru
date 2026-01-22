@@ -64,7 +64,9 @@ public class MenuManager implements Menu {
 
             items.add(new Shirt(items.size() + 1, name, size, price, print));
             System.out.println("Shirt added!");
-        } catch (IllegalArgumentException e) {
+
+        }
+        catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
     }
@@ -85,7 +87,8 @@ public class MenuManager implements Menu {
 
             items.add(new Jacket(items.size() + 1, name, size, price, hood));
             System.out.println("Jacket added!");
-        } catch (IllegalArgumentException e) {
+        }
+            catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
     }
