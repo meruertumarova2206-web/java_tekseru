@@ -6,14 +6,14 @@ public class Jacket extends ClothingItem implements Discountable {
 
     private boolean hasHood;
 
-    public Jacket(int itemId, String name, String size, double price, boolean hasHood) {
-        super(itemId, name, size, price);
+    public Jacket(int id, String name, String size, double price, boolean hasHood) {
+        super(id, name, size, price);
         this.hasHood = hasHood;
     }
 
     @Override
     public String getType() {
-        return "Jacket";
+        return "JACKET";
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Jacket extends ClothingItem implements Discountable {
 
     @Override
     public double getDiscount() {
-        return price * 0.10; // 10% discount
+        return price * 0.1;
     }
 
     public boolean hasHood() {

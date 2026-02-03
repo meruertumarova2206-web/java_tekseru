@@ -4,14 +4,14 @@ public class Shirt extends ClothingItem {
 
     private boolean hasPrint;
 
-    public Shirt(int itemId, String name, String size, double price, boolean hasPrint) {
-        super(itemId, name, size, price);
+    public Shirt(int id, String name, String size, double price, boolean hasPrint) {
+        super(id, name, size, price);
         this.hasPrint = hasPrint;
     }
 
     @Override
     public String getType() {
-        return "Shirt";
+        return "SHIRT";
     }
 
     @Override

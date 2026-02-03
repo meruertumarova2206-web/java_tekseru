@@ -14,44 +14,56 @@ public abstract class ClothingItem {
         setPrice(price);
     }
 
-
     public abstract void display();
     public abstract String getType();
 
+    // Геттеры для доступа к полям
+    public String getName() {
+        return name;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getItemId() {
+        return itemId;
+    }
 
     public void setItemId(int itemId) {
-        if (itemId <= 0) {
-            throw new IllegalArgumentException("Item ID must be positive");
-        }
+        if (itemId < 0)
+            throw new IllegalArgumentException("ID cannot be negative");
         this.itemId = itemId;
     }
 
+
     public void setName(String name) {
-        if (name == null || name.trim().isEmpty()) {
-            throw new IllegalArgumentException("Name cannot be empty");
-        }
+        if (name == null || name.isBlank())
+            throw new IllegalArgumentException("Name is empty");
         this.name = name;
     }
 
     public void setSize(String size) {
-        if (size == null || size.trim().isEmpty()) {
-            throw new IllegalArgumentException("Size cannot be empty");
-        }
+        if (size == null || size.isBlank())
+            throw new IllegalArgumentException("Size is empty");
         this.size = size;
     }
 
     public void setPrice(double price) {
-        if (price < 0) {
-            throw new IllegalArgumentException("Price cannot be negative");
-        }
+        if (price < 0)
+            throw new IllegalArgumentException("Price < 0");
         this.price = price;
     }
 
     @Override
     public String toString() {
-        return "[" + getType() + "] " + name +
+        return "[" + getType() + "] ID: " + itemId +
+                " | " + name +
                 " | Size: " + size +
-                " | Price: " + price + " KZT";
+                " | Price: " + price;
     }
 }
-
