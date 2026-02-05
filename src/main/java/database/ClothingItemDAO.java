@@ -35,7 +35,6 @@ public class ClothingItemDAO {
             ps.executeUpdate();
             ps.close();
             System.out.println("Item added!");
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -61,7 +60,6 @@ public class ClothingItemDAO {
 
             rs.close();
             ps.close();
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -97,7 +95,6 @@ public class ClothingItemDAO {
 
     public void updatePrice(int id, double price) {
         String sql = "UPDATE clothing_items SET price = ? WHERE item_id = ?";
-
         Connection conn = DatabaseConnection.getConnection();
         if (conn == null) return;
 
@@ -113,7 +110,6 @@ public class ClothingItemDAO {
                 System.out.println("Price updated!");
             else
                 System.out.println("Item not found!");
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -122,9 +118,8 @@ public class ClothingItemDAO {
     }
 
 
-    public void deleteItem(int id) {
+   public void deleteItem(int id) {
         String sql = "DELETE FROM clothing_items WHERE item_id = ?";
-
         Connection conn = DatabaseConnection.getConnection();
         if (conn == null) return;
 
@@ -139,13 +134,12 @@ public class ClothingItemDAO {
                 System.out.println("Item deleted!");
             else
                 System.out.println("Item not found!");
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             DatabaseConnection.closeConnection(conn);
         }
-    }
+   }
 
 
     public List<ClothingItem> searchByPriceRange(double min, double max) {
@@ -155,8 +149,8 @@ public class ClothingItemDAO {
 
         try (PreparedStatement ps = conn.prepareStatement(
                 "SELECT * FROM clothing_items WHERE price BETWEEN ? AND ? ORDER BY price DESC")) {
-            ps.setDouble(1, min);
-            ps.setDouble(2, max);
+            ps.setDouble(1,min);
+            ps.setDouble(2,max);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) list.add(extract(rs));
         } catch (SQLException e) { e.printStackTrace(); }
@@ -198,7 +192,7 @@ public class ClothingItemDAO {
         try (PreparedStatement ps = conn.prepareStatement(
                 "SELECT * FROM clothing_items WHERE price >= ?")) {
             ps.setDouble(1, minPrice);
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs=ps.executeQuery();
             while (rs.next()) list.add(extract(rs));
         } catch (SQLException e) {
             e.printStackTrace();
@@ -215,7 +209,6 @@ public class ClothingItemDAO {
         double price = rs.getDouble("price");
         String type = rs.getString("type");
         boolean feature = rs.getBoolean("has_feature");
-
         return type.equals("SHIRT")
                 ? new Shirt(id, name, size, price, feature)
                 : new Jacket(id, name, size, price, feature);
