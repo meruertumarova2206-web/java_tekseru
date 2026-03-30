@@ -2,7 +2,7 @@ package org.example;
 import java.util.Scanner;
 public class five {
 
-    public static void sum(int n, Scanner scanner) {
+    public static void sum(int n, Scanner scanner){
         if(n<=0){
             return;
         }
@@ -11,11 +11,10 @@ public class five {
         System.out.print(x + " ");
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+   public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
         int n = scanner.nextInt();
-        sum(n, scanner);
-
+        sum(n,scanner);
         scanner.close();
-    }
+   }
 }
