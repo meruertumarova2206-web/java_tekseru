@@ -20,6 +20,7 @@ public class SumP {
         }
         int result = sum(numbers, size);
         System.out.println(result);
+
         scanner.close();
     }
 }

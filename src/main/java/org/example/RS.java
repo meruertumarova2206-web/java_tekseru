@@ -1,7 +1,5 @@
 package org.example;
-
 import java.util.Scanner;
-
 public class RS {
 
     public static void printReverse(int n, Scanner scanner) {
@@ -17,6 +15,7 @@ public class RS {
         Scanner scanner = new Scanner(System.in);
         int n = Integer.parseInt(scanner.nextLine());
         printReverse(n, scanner);
+
         scanner.close();
     }
 }

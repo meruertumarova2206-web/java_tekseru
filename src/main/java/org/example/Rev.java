@@ -1,7 +1,5 @@
 package org.example;
-
 import java.util.Scanner;
-
 public class Rev{
 
     public static void printRev(int n, Scanner scanner) {
@@ -17,6 +15,7 @@ public class Rev{
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         printRev(n, scanner);
+
         scanner.close();
     }
 }

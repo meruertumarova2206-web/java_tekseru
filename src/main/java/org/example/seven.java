@@ -22,6 +22,7 @@ public class seven {
         int k = scanner.nextInt();
         int[] seq = new int[n];
         generate(n, k, seq, 0);
+
         scanner.close();
     }
 }

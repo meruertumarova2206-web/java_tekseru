@@ -1,7 +1,5 @@
 package org.example;
-
 import java.util.Scanner;
-
 public class RecursiaArray {
     public static int ToN(int n) {
         if (n <= 1) {
@@ -12,6 +10,7 @@ public class RecursiaArray {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("n= ");
         int n = scanner.nextInt();
 

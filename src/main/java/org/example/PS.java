@@ -9,13 +9,17 @@ public class PS {
     }
 
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("b = ");
+
         int b = scanner.nextInt();
         System.out.print("n = ");
+
         int n = scanner.nextInt();
         long result = sum(b, n);
         System.out.println(result);
+
         scanner.close();
     }
 }
