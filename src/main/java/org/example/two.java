@@ -1,11 +1,11 @@
 package org.example;
 import java.util.Scanner;
 public class two {
-    public static int ToN(int n) {
+    public static int sum(int n) {
         if (n <= 1) {
             return n;
         }
-        return n + ToN(n - 1);
+        return n + sum(n - 1);
     }
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class two {
         System.out.print("n= ");
         int n = scanner.nextInt();
 
-        int result=ToN(n);
+        int result= sum(n);
         System.out.println(result);
 
         scanner.close();

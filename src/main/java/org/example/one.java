@@ -1,11 +1,11 @@
 package org.example;
 import java.util.Scanner;
 public class one {
-    public static int recursia(int n) {
+    public static int sum(int n) {
         if (n == 1) {
             return 1;
         }
-        return n * n + recursia(n - 1);
+        return n * n + sum(n - 1);
     }
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -13,7 +13,7 @@ public class one {
         System.out.print("n= ");
         int n = scanner.nextInt();
 
-        int result = recursia(n);
+        int result = sum(n);
         System.out.println(result);
 
         scanner.close();
