@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class recursia {
     public static int recursia(int n) {
         if (n == 1) {
-            return 1; // базовый случай
+            return 1;
         }
-        return n * n + recursia(n - 1); // рекурсия
+        return n * n + recursia(n - 1);
     }
 
     public static void main(String[] args) {
