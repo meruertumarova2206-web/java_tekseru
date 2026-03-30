@@ -2,7 +2,7 @@ package org.example;
 import java.util.Scanner;
 public class seven {
 
-    public static void generate(int n, int k, int[] seq, int pos) {
+    public static void sum(int n, int k, int[] seq, int pos) {
         if (pos == n) {
             for (int i = 0; i < n; i++) {
                 System.out.print(seq[i] + " ");
@@ -12,7 +12,7 @@ public class seven {
         }
         for (int i = 1; i <= k; i++) {
             seq[pos] = i;
-            generate(n, k, seq, pos + 1);
+            sum(n, k, seq, pos + 1);
         }
     }
 
@@ -21,7 +21,7 @@ public class seven {
         int n = scanner.nextInt();
         int k = scanner.nextInt();
         int[] seq = new int[n];
-        generate(n, k, seq, 0);
+        sum(n, k, seq, 0);
 
         scanner.close();
     }
