@@ -1,7 +1,6 @@
 package org.example;
 import java.util.Scanner;
 public class six {
-
     public static void sum(int n, Scanner scanner) {
         if (n <= 0) {
             return;
