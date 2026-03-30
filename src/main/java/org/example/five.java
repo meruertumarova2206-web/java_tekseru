@@ -1,8 +1,7 @@
 package org.example;
 import java.util.Scanner;
 public class five {
-
-    public static void sum(int n, Scanner scanner){
+    public static void sum(int n,Scanner scanner){
         if(n<=0){
             return;
         }
