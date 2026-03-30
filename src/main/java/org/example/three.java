@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-public class PS {
+public class three {
     public static long sum(int b, int n) {
         if (n == 0) {
             return 1;

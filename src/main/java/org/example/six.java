@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-public class RS {
+public class six {
 
     public static void printReverse(int n, Scanner scanner) {
         if (n <= 0) {

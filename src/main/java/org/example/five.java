@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-public class Rev{
+public class five {
 
     public static void printRev(int n, Scanner scanner) {
         if (n <= 0) {

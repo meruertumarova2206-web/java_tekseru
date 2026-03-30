@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-public class RecursiaArray {
+public class two {
     public static int ToN(int n) {
         if (n <= 1) {
             return n;

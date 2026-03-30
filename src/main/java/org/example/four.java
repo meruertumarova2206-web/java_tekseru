@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-public class SumP {
+public class four {
 
     public static int sum(int[] arr, int n) {
         if (n <= 0) {
