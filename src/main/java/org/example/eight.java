@@ -21,14 +21,14 @@ public class eight {
         sum(matrix, start+1, end-1, num);
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
-        int[][] matrix = new int[N][N];
-        sum(matrix, 0, N - 1, 1);
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                System.out.print(matrix[i][j] + " ");
+    public static void main(String[] args){
+        Scanner scanner=new Scanner(System.in);
+        int N= scanner.nextInt();
+        int[][] matrix= new int[N][N];
+        sum(matrix,0,N-1,1);
+        for(int i=0;i<N;i++){
+            for(int j=0;j<N;j++){
+                System.out.print(matrix[i][j]+" ");
             }
             System.out.println();
         }
