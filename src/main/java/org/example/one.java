@@ -8,12 +8,12 @@ public class one {
         return n * n + sum(n - 1);
     }
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner=new Scanner(System.in);
 
-        System.out.print("n= ");
+        System.out.print("n = ");
         int n = scanner.nextInt();
 
-        int result = sum(n);
+        int result=sum(n);
         System.out.println(result);
 
         scanner.close();
